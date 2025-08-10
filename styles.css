@@ -56,3 +56,139 @@ body {
     display: flex;
     align-items: center;
 }
+.profile-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #333;
+    z-index: 100;
+    padding: 3rem 1.25rem 2rem;
+    min-height: 640px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+    margin-bottom: 2.5rem;
+}
+
+.nav-link {
+    color: #262729;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.utility-icons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.currency-icon {
+    width: 12px;
+    height: 24px;
+}
+
+.language-icon {
+    width: 28px;
+    height: 24px;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: auto;
+}
+
+.social-link img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Hero Section */
+.hero-banner {
+    background: url(assert/background-picture.png) center/cover no-repeat;
+    padding: 2rem 1rem;
+    min-height: 400px;
+}
+
+.hero-content {
+    max-width: 100%;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #262729;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    width: 232px;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #262729;
+    margin-bottom: 2.125rem;
+}
+
+.search-container {
+    position: relative;
+    background: white;
+    border-radius: 50px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex: 1;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-label {
+    color: #303038;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.destination-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #262729;
+    font-size: 1rem;
+}
+
+.destination-input::placeholder {
+    color: #a3a3a3;
+}

@@ -34,3 +34,30 @@ function toggleMobileMenu(isOpen) {
         menuToggle.classList.remove("is-hidden");
     }
 }
+// Features Section Data and Rendering
+const FEATURES_DATA = [
+    {
+        image: "assert/card.png",
+        alt: "payment methods",
+        title: "Payment Method",
+        description: "We offer a wide range of payment methods, from cryptocurrencies to traditional options."
+    },
+    {
+        image: "assert/search-process.png",
+        alt: "simple search",
+        title: "Simple Search Process", 
+        description: "We checked it out, even the kid did it, but it was my mom's friend's son."
+    },
+    {
+        image: "assert/support.svg",
+        alt: "customer support",
+        title: "24/7 Support",
+        description: "Is there something you don't understand? Feel free to call us. Phone number in the footer."
+    },
+    {
+        image: "assert/friendly.svg",
+        alt: "friendly service",
+        title: "We are nice",
+        description: "Fantasy is over, there will be something really convincing here."
+    }
+];
