@@ -524,3 +524,76 @@ body {
     font-size: 0.875rem;
     color: #666;
 }
+.email-form {
+    width: 100%;
+}
+
+.email-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.email-input {
+    flex: 1;
+    height: 40px;
+    padding: 0 3rem 0 1rem;
+    border: 1px solid #ee685f;
+    border-radius: 10px;
+    font-size: 0.875rem;
+}
+
+.submit-btn {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    background: #ee685f;
+    border: none;
+    border-radius: 0 9px 9px 0;
+    padding: 0 0.75rem;
+    cursor: pointer;
+}
+
+.submit-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2rem 0;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    color: #ee685f;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.social-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.credit {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.credit-link {
+    color: #2a90d9;
+    text-decoration: underline;
+}
