@@ -277,3 +277,17 @@ document.addEventListener("click", function(event) {
         // Add load more functionality here
     }
 });
+// Newsletter Form Handler
+document.addEventListener("submit", function(event) {
+    if (event.target.classList.contains("email-form")) {
+        event.preventDefault();
+        const emailInput = event.target.querySelector(".email-input");
+        const email = emailInput.value.trim();
+        
+        if (email) {
+            // Handle newsletter subscription
+            console.log("Newsletter subscription:", email);
+            emailInput.value = "";
+        }
+    }
+});
