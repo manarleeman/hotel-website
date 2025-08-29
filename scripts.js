@@ -263,3 +263,17 @@ function createElement(tag, className, content = "") {
 function handleError(error, context) {
     console.error(`Error in ${context}:`, error);
 }
+// Event Delegation for Dynamic Content
+document.addEventListener("click", function(event) {
+    // Handle like button clicks
+    if (event.target.closest(".like-btn")) {
+        event.preventDefault();
+        // Add like functionality here
+    }
+    
+    // Handle load more reviews
+    if (event.target.id === "load-more-reviews") {
+        event.preventDefault();
+        // Add load more functionality here
+    }
+});
