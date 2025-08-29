@@ -143,3 +143,56 @@ function buildOfferCard(offer) {
         </div>
     `;
 }
+// Testimonials Data and Rendering
+const TESTIMONIALS_DATA = [
+    {
+        avatar: "assert/headshot.svg",
+        alt: "customer photo",
+        review: "I quickly found the right tour for me, but I had a few questions about the hotel, I wrote to tech support and they answered all my questions within an hour. The vacation itself was perfect. Thank you very much. I will come back again and again.",
+        name: "Jannike Borge",
+        occupation: "Publisher"
+    },
+    {
+        avatar: "assert/lebron.svg", 
+        alt: "customer photo",
+        review: "I quickly found the right tour for me, but I had a few questions about the hotel, I wrote to tech support and they answered all my questions within an hour. The vacation itself was perfect. Thank you very much. I will come back again and again.",
+        name: "LeBron Durant",
+        occupation: "Flight attendant"
+    },
+    {
+        avatar: "assert/piho-image.svg",
+        alt: "customer photo", 
+        review: "I quickly found the right tour for me, but I had a few questions about the hotel, I wrote to tech support and they answered all my questions within an hour. The vacation itself was perfect. Thank you very much. I will come back again and again.",
+        name: "Kaarel Piho",
+        occupation: "Chiropodist"
+    }
+];
+
+function loadTestimonials() {
+    const testimonialsContainer = document.getElementById("testimonials-container");
+    if (!testimonialsContainer) return;
+
+    let reviewsHTML = "";
+    
+    TESTIMONIALS_DATA.forEach(testimonial => {
+        reviewsHTML += generateTestimonialCard(testimonial);
+    });
+    
+    testimonialsContainer.innerHTML = reviewsHTML;
+}
+
+function generateTestimonialCard(testimonial) {
+    return `
+        <div class="testimonial-card">
+            <img src="${testimonial.avatar}" alt="${testimonial.alt}" />
+            <div class="testimonial-content">
+                <p class="testimonial-text">${testimonial.review}</p>
+                <div class="testimonial-source">
+                    <p class="testimonial-author">
+                        <span class="author-name">${testimonial.name}</span>, ${testimonial.occupation}
+                    </p>
+                </div>
+            </div>
+        </div>
+    `;
+}
