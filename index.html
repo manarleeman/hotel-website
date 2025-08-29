@@ -3,13 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Booking Platform</title>
+    <title>Hotel Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header class="main-header">
+        <nav class="primary-navigation">
+            <div class="nav-controls">
+                <button id="menu-toggle" class="hamburger-btn">
+                    <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="1" x2="32" y2="1" stroke="#333333" stroke-width="2" />
+                        <line y1="11" x2="32" y2="11" stroke="#333333" stroke-width="2" />
+                        <line y1="21" x2="32" y2="21" stroke="#333333" stroke-width="2" />
+                    </svg>
+                </button>
+                <button id="menu-close" class="close-btn is-hidden">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 25L25 1M25 25L1 1" stroke="#333333" stroke-width="2" />
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="brand-logo">
+                <h1 class="logo-text"><span class="brand-accent">Your</span>.logo</h1>
+            </div>
+            
+            <div class="user-profile">
+                <button class="profile-btn">
+                    <img src="assert/icon.svg" alt="user profile" class="profile-icon" />
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div class="mobile-nav is-hidden" id="mobile-navigation">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link">Last Minute Deals</a></li>
+                    <li><a href="#" class="nav-link">Blog</a></li>
+                    <li><a href="#" class="nav-link">About Us</a></li>
+                    <li><a href="#" class="nav-link">Contacts</a></li>
+                </ul>
+                
+                <div class="utility-icons">
+                    <img src="./assert/money.png" alt="currency" class="currency-icon" />
+                    <img src="./assert/language.png" alt="language" class="language-icon" />
+                </div>
+
+                <div class="social-media">
+                    <a href="#" class="social-link"><img src="./assert/Phone_black.svg" alt="phone" /></a>
+                    <a href="#" class="social-link"><img src="./assert/face-book-block.svg" alt="facebook" /></a>
+                    <a href="#" class="social-link"><img src="./assert/Youtube.svg" alt="youtube" /></a>
+                    <a href="#" class="social-link"><img src="./assert/Telegram.svg" alt="telegram" /></a>
+                    <a href="#" class="social-link"><img src="./assert/Instagram.svg" alt="instagram" /></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1 class="hero-title">Find an apartment for your vacation</h1>
+                <p class="hero-description">
+                    We have several thousands apartments for every taste in every corner of the globe
+                </p>
+                
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <img class="location-icon" src="assert/location icon.svg" alt="location" />
+                        <div class="input-group">
+                            <label class="input-label">Where</label>
+                            <input type="search" class="destination-input" placeholder="Search Destination" />
+                        </div>
+                    </div>
+                    <button class="search-btn">
+                        <img src="assert/search button.png" alt="search" />
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="features-section">
+            <div class="section-header">
+                <h2 class="section-title">Why choose us</h2>
+                <p class="section-description">
+                    The main reason is because our competitors have disgusting sites, but we can't write that here, so the text here will be different
+                </p>
+            </div>
+            <div class="features-grid" id="features-container">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </section>
+        <section class="offers-section">
+            <h2 class="section-title">Special Offers</h2>
+            <div class="offers-grid" id="offers-container">
+                <!-- Offer cards generated dynamically -->
+            </div>
+        </section>
+        <section class="testimonials-section">
+            <h2 class="section-title">Reviews</h2>
+            <div class="testimonials-container" id="testimonials-container">
+                <!-- Review cards populated by JavaScript -->
+            </div>
+             <button class="load-more-btn" id="load-more-reviews">More Reviews</button>
+        </section>
+        <section class="blog-section">
+            <h2 class="section-title">Recent Posts</h2>
+            <div class="blog-posts" id="blog-container">
+                <!-- Blog posts will be dynamically generated -->
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-wrapper">
+            <div class="footer-sections">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Title of sections</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Page Title</a></li>
+                        <li><a href="#">Page Title</a></li>
+                        <li><a href="#">Page Title</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Title of sections</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Page Title</a></li>
+                        <li><a href="#">Page Title</a></li>
+                        <li><a href="#">Page Title</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Title of sections</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Page Title</a></li>
+                        <li><a href="#">Page Title</a></li>
+                        <li><a href="#">Page Title</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter-signup">
+                    <h3 class="newsletter-title">Subscribe to Newsletter</h3>
+                    <p class="newsletter-description">Your email</p>
+                    <form class="email-form">
+                        <div class="email-wrapper">
+                            <input type="email" class="email-input" id="newsletter-email" placeholder="Enter your email">
+                            <button type="submit" class="submit-btn">
+                                <img src="assert/carbon_send-alt.svg" alt="send">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="footer-divider" />
+            
+            <div class="footer-bottom">
+                <h1 class="footer-logo"><span class="brand-accent">Your</span>.logo</h1>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><img src="assert/Phone_black.svg" alt="phone" /></a>
+                    <a href="#" class="social-icon"><img src="assert/face-book-block.svg" alt="facebook" /></a>
+                    <a href="#" class="social-icon"><img src="assert/Youtube.svg" alt="youtube" /></a>
+                    <a href="#" class="social-icon"><img src="assert/Instagram.svg" alt="instagram" /></a>
+                    <a href="#" class="social-icon"><img src="assert/Telegram.svg" alt="telegram" /></a>
+                </div>
+                <p class="credit">Design by <a href="#" class="credit-link">Delvig</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
