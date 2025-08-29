@@ -61,3 +61,25 @@ const FEATURES_DATA = [
         description: "Fantasy is over, there will be something really convincing here."
     }
 ];
+function loadFeatureCards() {
+    const container = document.querySelector("#features-container");
+    if (!container) return;
+
+    let htmlContent = "";
+    
+    for (const feature of FEATURES_DATA) {
+        htmlContent += createFeatureCard(feature);
+    }
+    
+    container.innerHTML = htmlContent;
+}
+
+function createFeatureCard(feature) {
+    return `
+        <div class="feature-card">
+            <img src="${feature.image}" alt="${feature.alt}" />
+            <h3>${feature.title}</h3>
+            <p>${feature.description}</p>
+        </div>
+    `;
+}
