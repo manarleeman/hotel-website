@@ -196,3 +196,59 @@ function generateTestimonialCard(testimonial) {
         </div>
     `;
 }
+// Blog Posts Data and Rendering  
+const BLOG_POSTS = [
+    {
+        image: "assert/trip-to-athlens.svg",
+        alt: "Athens cityscape",
+        publishDate: "May 23, 2022",
+        readTime: "1 minute",
+        title: "My trip to Athens",
+        excerpt: "It would seem that in a city where Theseus, Plato and Epicurus once walked, the very idea of the subway is alien to the city, but already..."
+    },
+    {
+        image: "assert/vilnius.svg",
+        alt: "Vilnius landscape", 
+        publishDate: "May 22, 2022",
+        readTime: "1 minute",
+        title: "Vilnius resorts",
+        excerpt: "I haven't seen any resorts in Vilnius, but there are wonderful people and pubs"
+    },
+    {
+        image: "assert/tips-for-flying.svg",
+        alt: "airplane illustration",
+        publishDate: "May 20, 2022", 
+        readTime: "15 minutes",
+        title: "Tips for flying on a plane",
+        excerpt: "If you have a fear of flying, here's a helpful tip: bring your co-pilot so you can take a nap while he steers the plane for you"
+    }
+];
+
+function loadBlogPosts() {
+    const blogContainer = document.querySelector("#blog-container");
+    if (!blogContainer) return;
+
+    const postsHTML = BLOG_POSTS.map(post => renderBlogCard(post)).join("");
+    blogContainer.innerHTML = postsHTML;
+}
+
+function renderBlogCard(post) {
+    return `
+        <article class="blog-card">
+            <div class="blog-header">
+                <img src="${post.image}" alt="${post.alt}" class="blog-image" />
+                <div class="post-meta">
+                    <span class="post-date">${post.publishDate}</span>
+                    <div class="read-time">
+                        <img src="assert/bx_time-five.svg" alt="clock icon" />
+                        <span>${post.readTime}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-content">
+                <h3 class="blog-title">${post.title}</h3>
+                <p class="blog-excerpt">${post.excerpt}</p>
+            </div>
+        </article>
+    `;
+}
