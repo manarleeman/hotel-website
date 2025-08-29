@@ -83,3 +83,63 @@ function createFeatureCard(feature) {
         </div>
     `;
 }
+// Special Offers Data and Rendering
+const OFFERS_DATA = [
+    {
+        image: "assert/wilderness_club.svg",
+        alt: "2 bedroom lodge",
+        title: "Wilderness Club at Big Cedar",
+        dates: "28th October - 1st November",
+        price: "$2016",
+        duration: "6 days"
+    },
+    {
+        image: "assert/wilderness_club2.png", 
+        alt: "ocean view accommodation",
+        title: "Ocean View Resort",
+        dates: "15th November - 20th November",
+        price: "$2500",
+        duration: "5 days"
+    },
+    {
+        image: "assert/wilderness_club3.png",
+        alt: "mountain retreat",
+        title: "Mountain Retreat", 
+        dates: "5th December - 10th December",
+        price: "$3000",
+        duration: "5 days"
+    }
+];
+
+function loadSpecialOffers() {
+    const offersContainer = document.getElementById("offers-container");
+    if (!offersContainer) return;
+
+    const offersHTML = OFFERS_DATA.map(offer => buildOfferCard(offer)).join("");
+    offersContainer.innerHTML = offersHTML;
+}
+
+function buildOfferCard(offer) {
+    return `
+        <div class="offer-card">
+            <div class="offer-header">
+                <img class="offer-image" src="${offer.image}" alt="${offer.alt}" />
+                <div class="like-btn">
+                    <img src="assert/like.svg" alt="favorite" />
+                </div>
+                <img class="rating-badge" src="assert/rating.svg" alt="rating" />
+            </div>
+            <div class="offer-details">
+                <div class="offer-info">
+                    <h3 class="offer-title">${offer.title}</h3>
+                    <p class="offer-date">${offer.dates}</p>
+                </div>
+                <div class="offer-pricing">
+                    <p class="price-display">
+                        <span class="price-amount">${offer.price}</span> /${offer.duration}
+                    </p>
+                </div>
+            </div>
+        </div>
+    `;
+}
