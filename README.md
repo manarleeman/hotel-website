@@ -8,7 +8,7 @@ The site has been deployed on Render.com, making it publicly accessible. A full 
 
 🌍 Live Demo
 
-View the deployed site on Render
+View the deployed site on Render right here
 
 🎥 Loom Walkthrough
 
